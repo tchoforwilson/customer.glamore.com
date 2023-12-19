@@ -60,6 +60,54 @@
   }
 
   & .search-widget {
-    flex: 0 0 80%;
+    width: 52.2rem;
+    height: 4.8rem;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    &-item {
+      &:link,
+      &:visited {
+        border-bottom: initial;
+      }
+      &:hover,
+      &:active {
+        border-bottom: initial;
+      }
+    }
+  }
+
+  &__cart {
+    width: 12rem;
+    height: 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    border-radius: 3.1rem;
+    border: 1px solid $color-neutral-6;
+
+    & span {
+      color: $color-neutral-4;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+    }
+    &:visited,
+    &:link {
+      border: 1px solid $color-neutral-6;
+    }
+    &:hover,
+    &:active {
+      border: 1px solid $color-neutral-6;
+    }
+  }
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    stroke: $color-neutral-4;
   }
 }
