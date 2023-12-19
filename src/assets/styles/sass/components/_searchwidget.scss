@@ -4,6 +4,19 @@
   border: 1px solid $color-grey-1;
   padding: 1.1rem 2.2rem;
 
+  &__form {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+  }
+
+  &__icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    stroke: $color-neutral-4;
+  }
+
   &__input {
     color: $color-neutral-4;
     font-size: 1.4rem;
