@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container">
-        <div className="flex-row">
-          <div className="columns-4">
+        <div className="columns-3">
+          <div className="footer__info">
             <div className="footer__logo">
               <img
                 src={require("../../assets/logos/glamore-logo.png")}
@@ -15,7 +15,7 @@ const Footer = () => {
               <span>Glamore</span>
             </div>
           </div>
-          <div className="columns-3">
+          <div className="footer__about">
             <h2 className="footer__header">About</h2>
             <menu className="footer__nav">
               <li className="footer__nav-item">
@@ -35,7 +35,7 @@ const Footer = () => {
               </li>
             </menu>
           </div>
-          <div className="columns-3">
+          <div className="footer__services">
             <h2 className="footer__header">Services</h2>
             <menu className="footer__nav">
               <li className="footer__nav-item">
@@ -60,7 +60,7 @@ const Footer = () => {
               </li>
             </menu>
           </div>
-          <div className="columns-3">
+          <div className="footer__for-users">
             <h2 className="footer__header">For users</h2>
             <menu className="footer__nav">
               <li className="footer__nav-item">
