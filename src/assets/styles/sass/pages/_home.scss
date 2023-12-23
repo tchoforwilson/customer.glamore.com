@@ -1,0 +1,93 @@
+@use "../abstracts/colors" as *;
+
+/* FILTER */
+.filter {
+  width: 32rem;
+  height: 107.4rem;
+
+  border-radius: 0.8rem;
+  border: 1px solid $color-neutral-6;
+  background: $color-white;
+
+  padding: 2.8rem 5rem 2.8rem 2.4rem;
+
+  &__header {
+    color: $color-grey-2;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 2.3rem;
+  }
+}
+.filter-form {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.2rem;
+
+  &__item {
+    color: $color-grey-2;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 150%;
+    text-transform: uppercase;
+  }
+
+  &__group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  &__input {
+    color: $color-neutral-2;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem; /* 166.667% */
+
+    border-radius: 0.6rem;
+    border: 2px solid $color-neutral-6;
+
+    display: flex;
+    padding: 0.9rem 4.3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    width: 11.3rem;
+    height: 3.8rem;
+  }
+
+  &__checkbox {
+    border-radius: 0.4rem;
+    border: 1px solid $color-neutral-6;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__checkbox-color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 4rem;
+    &:checked {
+      background-color: $color-white;
+    }
+    &:checked::after {
+      content: "\2713";
+      color: white;
+      font-size: 2em;
+    }
+  }
+
+  &__label {
+    color: $color-grey-3;
+    font-family: "Plus Jakarta Sanse", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+}
