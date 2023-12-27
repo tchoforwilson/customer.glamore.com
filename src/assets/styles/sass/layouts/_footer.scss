@@ -6,6 +6,13 @@
     padding: 6.4rem 6.4rem 3.9rem 6.4rem;
   }
 
+  &__grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    column-gap: 10rem;
+  }
+
   &__logo {
     display: inline-flex;
     align-items: center;
@@ -22,6 +29,13 @@
       font-size: 3.2rem;
       font-style: italic;
     }
+  }
+
+  &__description {
+    width: 50.6rem;
+    color: rgba($color-white, 0.7);
+    font-size: 1.8rem;
+    line-height: 3.2rem; /* 177.778% */
   }
 
   &__header {
@@ -47,9 +61,34 @@
     font-weight: 500;
   }
 
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.7rem;
+
+    &-link {
+      background-color: $color-black;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      width: 6.573rem;
+      height: 6.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    fill: $color-white;
+    width: 3rem;
+    height: 3rem;
+  }
+
   &__line {
-    color: rgba(53, 57, 69, 0.75);
-    height: 0.2rem;
+    //  color: rgba(53, 57, 69, 0.75);
+    // height: 0.2rem;
+    border-top: 0.2rem solid rgba(53, 57, 69, 0.75);
     margin: 4rem 0rem;
     width: 100%;
   }
