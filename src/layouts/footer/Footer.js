@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FooterIcon from "./FooterIcon";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container">
-        <div className="columns-3">
+        <div className="footer__grid">
           <div className="footer__info">
             <div className="footer__logo">
               <img
@@ -14,6 +15,11 @@ const Footer = () => {
               />
               <span>Glamore</span>
             </div>
+            <p className="footer__description">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaec
+              cupidatat no proident, sunt in culpa qui.
+            </p>
           </div>
           <div className="footer__about">
             <h2 className="footer__header">About</h2>
@@ -91,7 +97,20 @@ const Footer = () => {
             </menu>
           </div>
         </div>
-        <div className="footer__social"></div>
+        <div className="footer__social">
+          <Link className="footer__social-link" to="http://www.youtube.com">
+            <FooterIcon name="youtube" className="footer__icon" />
+          </Link>
+          <Link className="footer__social-link" to="http://www.facebook.com">
+            <FooterIcon name="facebook2" className="footer__icon" />
+          </Link>
+          <Link className="footer__social-link" to="http://www.twitter.com">
+            <FooterIcon name="twitter" className="footer__icon" />
+          </Link>
+          <Link className="footer__social-link" to="http://www.instagram.com">
+            <FooterIcon name="instagram" className="footer__icon" />
+          </Link>
+        </div>
         <div className="footer__line"></div>
         <div className="footer__rights">
           <p className="footer__info">
