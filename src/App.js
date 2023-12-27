@@ -1,8 +1,14 @@
 import React from "react";
-import NavBar from "./layouts/navbar/NavBar";
+import { Routes, Route } from "react-router-dom";
+import { HomeScreen } from "./screens";
 
 const App = () => {
-  return <NavBar />;
+  return (
+    <Routes>
+      <Route path="/home" element={<HomeScreen />} />
+      <Route path="/" element={<HomeScreen />} />
+    </Routes>
+  );
 };
 
 export default App;
