@@ -1,5 +1,74 @@
 @use "../abstracts/colors" as *;
 
+.home-categories {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3.2rem;
+
+  &__filter {
+    display: flex;
+    padding-right: 28.35rem;
+    align-items: center;
+    gap: 8.75rem;
+    align-self: stretch;
+  }
+
+  &__select {
+    display: flex;
+    padding: 0.8rem 0.8rem 0.8rem 1.6rem;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 1.2rem;
+    border: 2px solid $color-neutral-6;
+    background: $color-white;
+
+    color: $color-neutral-2;
+
+    /* Body 2 (Bold) */
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4rem; /* 150% */
+  }
+
+  &__categories {
+    display: flex;
+    list-style-type: none;
+  }
+
+  &__category {
+    display: flex;
+    width: 12rem;
+    height: 3.8rem;
+    padding: 0.6rem 1.2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    color: $color-neutral-4;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4rem; /* 150% */
+
+    &.active {
+      color: $color-white;
+      border-radius: 10rem;
+      background: $color-neutral-1;
+      font-family: "DM Sans", sans-serif;
+      font-weight: 700;
+    }
+  }
+
+  &__line {
+    height: 0.1rem;
+    align-self: stretch;
+    background: $color-neutral-6;
+  }
+}
+
 /* FILTER */
 .filter {
   width: 32rem;
