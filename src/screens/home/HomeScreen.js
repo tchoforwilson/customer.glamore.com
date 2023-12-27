@@ -36,6 +36,7 @@ const HomeScreen = () => {
     <>
       <section className="home-categories">
         <div className="home-categories__filter">
+          {/** TODO: Match this with the design */}
           <AppSelect
             name="best-sellers"
             items={best_sellers}
