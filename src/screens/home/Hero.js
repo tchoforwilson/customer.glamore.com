@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="home-hero h-[calc(100vh_-_86px)] relative">
+    <section className="home-hero h-[calc(100vh_-_86px)] relative m-0">
       <img
         src={require("../../assets/images/home-hero-banner.png")}
         alt="Glamore hero banner"

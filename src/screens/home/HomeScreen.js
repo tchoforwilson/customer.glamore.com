@@ -5,6 +5,7 @@ import { AppSelect } from "../../components/inputs";
 import FilterField from "./FilterField";
 import FilterCheckBox from "./FilterCheckBox";
 import FilterCheckColor from "./FilterCheckColor";
+import Hero from './Hero';
 
 import {
   dates,
@@ -35,6 +36,8 @@ const HomeScreen = () => {
 
   return (
     <AppScreenLayout>
+      <Hero />
+
       <section className="home-categories">
         <div className="home-categories__filter">
           {/** TODO: Match this with the design */}
