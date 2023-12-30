@@ -1,0 +1,19 @@
+.category-card {
+  @apply rounded-lg flex justify-between aspect-[16/5] items-center px-20 bg-[--background] text-[--foreground];
+
+  &__image {
+    @apply size-full;
+  }
+
+  &__content {
+    @apply flex flex-col gap-2 capitalize;
+
+    .category-card__title {
+      @apply text-2xl font-black;
+    }
+
+    .category-card__info {
+      @apply text-sm font-bold;
+    }
+  }
+}
