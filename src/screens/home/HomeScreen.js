@@ -6,6 +6,7 @@ import FilterField from "./FilterField";
 import FilterCheckBox from "./FilterCheckBox";
 import FilterCheckColor from "./FilterCheckColor";
 import Hero from './Hero';
+import {BlogCard} from '../../components/cards'
 
 import {
   dates,
@@ -26,6 +27,25 @@ const categories = [
   "Tops",
 ];
 
+const sellers = [
+  {
+    title: "Responsible navy suit",
+    image: require("../../assets/images/sellers/seller-1.jpg"),
+  },
+  {
+    title: "Biege and White overall",
+    image: require("../../assets/images/sellers/seller-2.jpg"),
+  },
+  {
+    title: "Lotus Brown Jackets",
+    image: require("../../assets/images/sellers/seller-4.jpg"),
+  },
+  // {
+  //   title: "Comfortable kaki T-shirt",
+  //   image: require("../../assets/sellers/seller-3.jpg"),
+  // },
+];
+
 const best_sellers = ["Best Sellers"];
 
 const HomeScreen = () => {
@@ -37,6 +57,14 @@ const HomeScreen = () => {
   return (
     <AppScreenLayout>
       <Hero />
+
+      <section className="home-sellers">
+        <div className="home-sellers__container grid tablet:grid-cols-3 max-tablet:gap-8 gap-4">
+          {sellers.map((seller) => (
+            <BlogCard key={seller.title} article={seller} />
+          ))}
+        </div>
+      </section>
 
       <section className="home-categories">
         <div className="home-categories__filter">
