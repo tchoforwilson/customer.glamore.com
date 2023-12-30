@@ -1,4 +1,4 @@
-import styles from "./ArticleCard.module.scss";
+import styles from "./BlogCard.module.scss";
 
 export default function ArticleCard({ article, className = "" }) {
   return (
