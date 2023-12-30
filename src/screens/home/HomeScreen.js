@@ -6,7 +6,7 @@ import FilterField from "./FilterField";
 import FilterCheckBox from "./FilterCheckBox";
 import FilterCheckColor from "./FilterCheckColor";
 import Hero from './Hero';
-import {BlogCard} from '../../components/cards'
+import { BlogCard, CategoryCard } from '../../components/cards'
 
 import {
   dates,
@@ -18,13 +18,36 @@ import {
   materials,
 } from "./FilterValues";
 
-const categories = [
-  "All Products",
-  "Baselayer",
-  "Jackets",
-  "Overshirts",
-  "Underwear",
-  "Tops",
+const categories = [{
+  name: "All Products",
+  background: '#F37C0080',
+  foreground: 'white'
+},
+  {
+    name: "Baselayer",
+    background: '#AAAEBB80',
+    foreground: 'black'
+  },
+  {
+    name: "Jackets",
+    background: '#005D6F80',
+    foreground: 'black'
+  },
+  {
+    name: "Overshirts",
+    background: '#7F001380',
+    foreground: 'black'
+  },
+  {
+    name: "Underwear",
+    background: '#37353980',
+    foreground: 'black'
+  },
+  {
+    name: "Tops",
+    background: '#DEE73380',
+    foreground: 'black'
+  }
 ];
 
 const sellers = [
@@ -66,6 +89,14 @@ const HomeScreen = () => {
         </div>
       </section>
 
+      <section className="home-">
+        <div class="grid w-full grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-3 max-tablet:gap-6 tablet:gap-4">
+          {categories.slice(0, 6).map(category => (
+            <CategoryCard category={category} />
+          ))}
+        </div>
+      </section>
+
       <section className="home-categories">
         <div className="home-categories__filter">
           {/** TODO: Match this with the design */}
@@ -77,12 +108,12 @@ const HomeScreen = () => {
           <menu className="home-categories__categories">
             {categories.map((category) => (
               <li
-                key={category}
+                key={category.name}
                 className={`home-categories__category ${
-                  activeCategory === category ? "active" : ""
+                  activeCategory === category.name ? "active" : ""
                 }`}
               >
-                {category}
+                {category.name}
               </li>
             ))}
           </menu>
