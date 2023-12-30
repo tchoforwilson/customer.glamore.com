@@ -9,11 +9,11 @@
     @apply flex flex-col gap-2 capitalize;
 
     .category-card__title {
-      @apply text-2xl font-black;
+      @apply text-2xl font-black whitespace-nowrap;
     }
 
     .category-card__info {
-      @apply text-sm font-bold;
+      @apply text-sm font-bold whitespace-nowrap;
     }
   }
 }

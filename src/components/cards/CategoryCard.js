@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CategoryCard.module.scss";
 
-export default function CategoryCard({ category, className = '', ...otherProps }) {
+const  CategoryCard = ({ category, className = '', ...otherProps }) => {
   return (
     <div className={`${styles["category-card"]} ${className}`} style={{
       '--background': category.background ?? 'firebrick',
@@ -14,7 +14,7 @@ export default function CategoryCard({ category, className = '', ...otherProps }
         />
       </div>
       <div className={styles["category-card__content"]}>
-        <span className={styles["category-title"]}>{category.name}</span>
+        <span className={styles["category-card__title"]}>{category.name}</span>
         <span className={styles["category-card__info"]}>
           {`${category.products?.length ?? 0} products`}
         </span>
@@ -22,3 +22,5 @@ export default function CategoryCard({ category, className = '', ...otherProps }
     </div>
   );
 }
+
+export default CategoryCard
